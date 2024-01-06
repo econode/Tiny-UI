@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+canvas {
+  background-color: white;
+}
+</style>
+<script src="/tui_icons.js"></script>
+<script>
+// https://writeandcodetime.com/blog/how-to-use-css-custom-properties-in-javascript-a-color-picker
+
+window.addEventListener('load', handleOnLoad);
+
+function handleOnLoad(){
+var fgColor = '#EF003B';
+var bgColor = '#DEE3E3';
+drawPlayButton("myCanvasA1",fgColor,bgColor);
+drawPlayButton("myCanvasB1",fgColor,bgColor);
+drawPlayButton("myCanvasC1",fgColor,bgColor);
+
+drawStopButton("myCanvasA2",fgColor,bgColor);
+drawStopButton("myCanvasB2",fgColor,bgColor);
+drawStopButton("myCanvasC2",fgColor,bgColor);
+
+drawPauseButton("myCanvasA3",fgColor,bgColor);
+drawPauseButton("myCanvasB3",fgColor,bgColor);
+drawPauseButton("myCanvasC3",fgColor,bgColor);
+
+drawFastForwardButton("myCanvasA4",fgColor,bgColor);
+drawFastForwardButton("myCanvasB4",fgColor,bgColor);
+drawFastForwardButton("myCanvasC4",fgColor,bgColor);
+
+drawRewindButton("myCanvasA5",fgColor,bgColor);
+drawRewindButton("myCanvasB5",fgColor,bgColor);
+drawRewindButton("myCanvasC5",fgColor,bgColor);
+
+drawTickButton("myCanvasA6",'green',bgColor);
+drawTickButton("myCanvasB6",'green',bgColor);
+drawTickButton("myCanvasC6",'green',bgColor);
+
+drawCrossButton("myCanvasA7",'red',bgColor);
+drawCrossButton("myCanvasB7",'red',bgColor);
+drawCrossButton("myCanvasC7",'red',bgColor);
+
+drawPowerButton("myCanvasA8",'white','green',0);
+drawPowerButton("myCanvasB8",'white','green',0);
+drawPowerButton("myCanvasC8",'white','green',0);
+
+var params ={position:0,bgColor:'red',fgColor: 'white',font: "serif",fontColor: 'black', text: 'Off'};
+
+drawToggleButton("myCanvasD2",{position:0,bgColor:'green',fgColor: 'white',font: "serif",fontColor: 'black', text: 'On'} );
+drawToggleButton("myCanvasC9",params);
+drawToggleButton("myCanvasA9",{position:0,bgColor:'green',fgColor: 'white'} );
+drawToggleButton("myCanvasA10",{position:1,bgColor:'green',fgColor: 'white'} );
+
+document.getElementById("myCanvasC9").addEventListener("pointerup",handleToggleC9 );
+document.getElementById("myCanvasD2").addEventListener("pointerup",handleToggleC9 );
+function handleToggleC9(event){
+    if( params.position == 0 ){
+        params.position = 1;
+        params.bgColor = 'green';
+        params.text = "On";
+    } else {
+        params.position = 0;
+        params.bgColor = 'red';
+        params.text = "Off";
+    }
+    drawToggleButton("myCanvasC9",params);
+    drawToggleButton("myCanvasD2",params);
+}
+
+}
+   
+
+</script>
+</head>
+<body>
+<canvas id="myCanvasA1" width="25" height="25" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasA2" width="25" height="25" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasA3" width="25" height="25" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasA4" width="25" height="25" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasA5" width="25" height="25" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasA6" width="25" height="25" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasA7" width="25" height="25" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasA8" width="25" height="25" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasA9" width="50" height="25" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasA10" width="50" height="25" style="border:1px solid #d3d3d3;"></canvas>
+<br/>
+<canvas id="myCanvasB1" width="100" height="100" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasB2" width="100" height="100" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasB3" width="100" height="100" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasB4" width="100" height="100" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasB5" width="100" height="100" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasB6" width="100" height="100" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasB7" width="100" height="100" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasB8" width="100" height="100" style="border:1px solid #d3d3d3;"></canvas>
+<br />
+<canvas id="myCanvasC1" width="150" height="150" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasC2" width="150" height="150" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasC3" width="150" height="150" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasC4" width="150" height="150" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasC5" width="150" height="150" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasC6" width="150" height="150" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasC7" width="150" height="150" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasC8" width="150" height="150" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasC9" width="200" height="70" style="border:1px solid #d3d3d3;"></canvas>
+<br/>
+<canvas id="myCanvasD2" width="450" height="150" style="border:1px solid #d3d3d3;"></canvas>
+
+</body>
+</html>
