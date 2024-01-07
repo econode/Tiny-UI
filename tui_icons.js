@@ -3,7 +3,8 @@ function drawPlayButton(id,fgColor,bgColor){
     const canvas = document.getElementById(id);
     const ctx = canvas.getContext("2d");
     const W = canvas.width;
- 
+    const H = canvas.height;
+    ctx.clearRect(0,0,W,H);
     ctx.beginPath();
     ctx.lineWidth = W*0.06;
     ctx.strokeStyle = fgColor;
@@ -12,7 +13,6 @@ function drawPlayButton(id,fgColor,bgColor){
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
-    
     ctx.beginPath();
     ctx.lineWidth = 1;
     ctx.strokeStyle = fgColor;
@@ -40,7 +40,7 @@ function drawToggleButton(id,params){
     const font = params.font;
     const textString = 'text' in params ? params.text : '';
     const fontColor = params.fontColor;
-    
+    ctx.clearRect(0,0,W,H);
     ctx.beginPath();
     ctx.lineWidth = H*0.06;
     ctx.strokeStyle = bgColor;
@@ -85,7 +85,9 @@ function drawPowerButton(id,fgColor,bgColor){
     const canvas = document.getElementById(id);
     const ctx = canvas.getContext("2d");
     const W = canvas.width;
+    const H = canvas.height;
     const R = 0.0174533; // Radians to degrees
+    ctx.clearRect(0,0,W,H);
     ctx.beginPath();
     ctx.lineWidth = 1;
     ctx.strokeStyle = bgColor;
@@ -118,7 +120,9 @@ function drawTickButton(id,fgColor,bgColor){
     /** @type {HTMLCanvasElement} */
     const canvas = document.getElementById(id);
     const ctx = canvas.getContext("2d");
+    const H = canvas.height;
     const W = canvas.width;
+    ctx.clearRect(0,0,W,H);
     ctx.beginPath();
     ctx.lineWidth = W*0.06;
     ctx.strokeStyle = fgColor;
@@ -127,7 +131,6 @@ function drawTickButton(id,fgColor,bgColor){
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
-    
     ctx.beginPath();
     ctx.lineWidth = W*0.12;
     ctx.lineCap = "round";
@@ -145,6 +148,8 @@ function drawCrossButton(id,fgColor,bgColor){
     const canvas = document.getElementById(id);
     const ctx = canvas.getContext("2d");
     const W = canvas.width;
+    const H = canvas.height;
+    ctx.clearRect(0,0,W,H);
     ctx.beginPath();
     ctx.lineWidth = W*0.06;
     ctx.strokeStyle = fgColor;
@@ -153,7 +158,6 @@ function drawCrossButton(id,fgColor,bgColor){
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
-    
     ctx.beginPath();
     ctx.lineWidth = W*0.12;
     ctx.lineCap = "round";
@@ -162,7 +166,6 @@ function drawCrossButton(id,fgColor,bgColor){
     ctx.lineTo(W*0.70,W*0.70);
     ctx.stroke();
     ctx.closePath();
-
     ctx.beginPath();
     ctx.lineWidth = W*0.12;
     ctx.lineCap = "round";
@@ -178,7 +181,8 @@ function drawFastForwardButton(id,fgColor,bgColor){
     const canvas = document.getElementById(id);
     const ctx = canvas.getContext("2d");
     const W = canvas.width;
-
+    const H = canvas.height;
+    ctx.clearRect(0,0,W,H);
     ctx.beginPath();
     ctx.lineWidth = W*0.06;
     ctx.strokeStyle = fgColor;
@@ -187,7 +191,6 @@ function drawFastForwardButton(id,fgColor,bgColor){
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
-
     ctx.beginPath();
     ctx.lineWidth = 1;
     ctx.strokeStyle = fgColor;
@@ -199,7 +202,6 @@ function drawFastForwardButton(id,fgColor,bgColor){
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
-
     ctx.beginPath();
     ctx.lineWidth = 1;
     ctx.strokeStyle = fgColor;
@@ -218,7 +220,8 @@ function drawRewindButton(id,fgColor,bgColor){
     const canvas = document.getElementById(id);
     const ctx = canvas.getContext("2d");
     const W = canvas.width;
-
+    const H = canvas.height;
+    ctx.clearRect(0,0,W,H);
     ctx.beginPath();
     ctx.lineWidth = W*0.06;
     ctx.strokeStyle = fgColor;
@@ -227,7 +230,6 @@ function drawRewindButton(id,fgColor,bgColor){
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
-
     ctx.beginPath();
     ctx.lineWidth = 1;
     ctx.strokeStyle = fgColor;
@@ -239,7 +241,6 @@ function drawRewindButton(id,fgColor,bgColor){
     ctx.fill();
     ctx.stroke();
     ctx.closePath();
-
     ctx.beginPath();
     ctx.lineWidth = 1;
     ctx.strokeStyle = fgColor;
@@ -258,7 +259,8 @@ function drawStopButton(id,fgColor,bgColor){
     const canvas = document.getElementById(id);
     const ctx = canvas.getContext("2d");
     const W = canvas.width;
-
+    const H = canvas.height;
+    ctx.clearRect(0,0,W,H);
     ctx.beginPath();
     ctx.lineWidth = W*0.06;
     ctx.strokeStyle = fgColor;
@@ -269,7 +271,6 @@ function drawStopButton(id,fgColor,bgColor){
     ctx.closePath();
     ctx.fillStyle=fgColor;
     ctx.fillRect(W*0.25, W*0.25, W*0.50, W*0.50);
-
 }
     
 function drawPauseButton(id,fgColor,bgColor){
@@ -277,6 +278,8 @@ function drawPauseButton(id,fgColor,bgColor){
     const canvas = document.getElementById(id);
     const ctx = canvas.getContext("2d");
     const W = canvas.width;
+    const H = canvas.height;
+    ctx.clearRect(0,0,W,H);
     ctx.beginPath();
     ctx.lineWidth = W*0.06;
     ctx.strokeStyle = fgColor;
